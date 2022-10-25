@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    height: 13vh;
+    width: 100vw;
+    background-color: black
+}
+
+.container{
+    display:flex;
+    alig-items: center;
+    flex-direction: row;
+    /* background: blue; */
+    width: 100vw;
+}
+
+.container h1{
+    color: white
+}
+
+.title{
+    display:flex;
+    /* background: red; */
+    margin-left: 230px;
+    align-items:center;
+}
+
+.imagenAlternova{
+    border: none
+}
