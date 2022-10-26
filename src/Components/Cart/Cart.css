@@ -1,0 +1,37 @@
+.main1 {
+    display: flex;
+    /* background: blue; */
+    height: 100vh;
+    widht: 100vw;
+    flex-direction: column;
+}
+
+.cart{
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.itemsCart{
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+    /* background-color: red; */
+    padding: 5px;
+    /* width: 100vw; */
+}
+
+.items{
+    display:flex;
+    margin: 40px;
+}
+
+.keys{
+    display: flex;
+    flex-direction: row;
+}
+
+.key{
+    display: flex;
+    margin: 30px;
+}

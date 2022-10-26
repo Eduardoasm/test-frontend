@@ -1,0 +1,30 @@
+.cardsHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+ }
+
+ .mainHome{
+    display:flex;
+    min-width: 98.7vw;
+    min-height: 100vh;
+    /* background: black; */
+ }
+
+ .containerCards{
+    display: flex;
+    /* background: black; */
+    width: 50vw;
+    flex-wrap: wrap;
+ }
+
+ .containerTable{
+    display: flex;
+    /* background: blue; */
+    width: 50vw;
+    min-height: 100vh;
+ }
+
+ 

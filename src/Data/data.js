@@ -1,7 +1,8 @@
 import redbull from "../Imagenes/Red_Bull_1800X1800_transparent.png"
 import rice from "../Imagenes/arrozalternova.jpg"
 import papitas from "../Imagenes/papitasAlternova.jpg"
-import meat from "../Imagenes/meatalternova.jpg"
+import meat from "../Imagenes/meatAlternova.png"
+import rice1 from "../Imagenes/riceAlternova.png"
 
 export const data = {
     "products": [
@@ -15,7 +16,7 @@ export const data = {
             "name": "rice",
             "unit_price": 2000,
             "stock": 0,
-            "image": rice
+            "image": rice1
         },
         {
             "name": "papitas de limón margarita",
