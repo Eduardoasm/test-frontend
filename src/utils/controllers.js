@@ -1,18 +1,22 @@
-
+import Swal from 'sweetalert2'
 
 export const addItem = (productItem, cartItems, setCartItems) => {
   const itemInCart = cartItems.find(
     (productItemCart) => productItemCart.name === productItem.name
   );
 
+  if(productItem.stock === 0){
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No have stock for add',
+    })
+  }
   if (itemInCart) {
     setCartItems(
       cartItems.map((productInCart) => {
         if (productInCart.name === productItem.name) {
-            if(productItem.stock === 0){
-                return "no have stock to add"
-            }
-          return { ...itemInCart, amount: itemInCart.amount + 1 && productItem.stock -1};
+              return { ...itemInCart, amount: itemInCart.amount + 1} ;
         }
         return productInCart;
       })
@@ -33,12 +37,12 @@ export const deleteItem = (productItem, cartItems, setCartItems) => {
       cartItems.filter((productItemCart) => productItemCart !== productItem)
     );
   } else {
-    setCartItems((productItemCart) => {
+    setCartItems(cartItems.map((productItemCart) => {
       if (productItemCart.name === productItem.name) {
-        return { ...itemInCart, amount: itemInCart.amount - 1 && productItem.stock +1};
+        return { ...itemInCart, amount: itemInCart.amount - 1 } ;
       }
       return productItemCart;
-    });
+    }));
   }
 };
 

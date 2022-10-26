@@ -33,8 +33,6 @@ export default function Products({name, unit_price, stock, image, safeProduct })
         />
         </div>
       </Card>
-            {/* </div>
-        </div> */}
     </div>
   );
 }

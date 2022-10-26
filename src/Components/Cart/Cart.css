@@ -1,29 +1,77 @@
 .main1 {
     display: flex;
     /* background: blue; */
-    height: 100vh;
-    widht: 100vw;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
+    border: solid
 }
 
-.cart{
+.cart1{
     display: flex;
-    margin: 5px;
+    /* margin: 5px; */
     flex-direction: column;
+    width: 100%;
+    height: 100%
 }
 
 .itemsCart{
+    height: 120px;
+    margin-top: 20px;
     display: flex;
-    margin: 20px;
-    flex-direction: row;
-    /* background-color: red; */
-    padding: 5px;
-    /* width: 100vw; */
+    align-item: center;
+     width: 100%;
+     border: groove ;
+
 }
 
-.items{
+.left{
+    margin-top: -50px;
+    /* margin: -40px; */
+    margin-left: -30px;
     display:flex;
-    margin: 40px;
+    flex-direction:row;
+    justify-content: space-between;
+    /* background-color: blue; */
+    width: 100%;
+}
+
+.item{
+    background: blue;
+    display: flex;
+    margin: 70px
+}
+
+.nameItem{
+    display: flex;
+    /* background:red; */
+    justify-content: space-between;
+    width: 80px;
+    margin: 20px
+}
+
+.amount{
+    display: flex;
+    /* background:red; */
+    justify-content: space-between;
+    width: 80px;
+    margin: 20px
+}
+
+.priceItem{
+    display: flex;
+    /* background:red; */
+    justify-content: space-between;
+    width: 80px;
+    margin: 20px
+}
+
+.totalItem{
+    display: flex;
+    /* background:red; */
+    justify-content: space-between;
+    width: 80px;
+    margin: 20px
 }
 
 .keys{
@@ -33,5 +81,40 @@
 
 .key{
     display: flex;
-    margin: 30px;
+    margin: 23px;
+}
+
+.buttonDelete{
+    display:flex;
+    widht: 10px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+.buttons{
+    display: flex;
+    /* background:red; */
+    justify-content: space-between;
+    width: 80px;
+    margin: 50px;
+
+}
+
+.totalOrder{
+    display:flex;
+    flex-direction:column;
+    width: 200px;
+    margin: 20px
+}
+
+.order{
+    display:flex;
+    flex-direction:column;
+    width: 150px;
+    margin: 20px;
+}
+
+.lastContainer{
+    display: flex;
+    justify-content: space-between;
 }

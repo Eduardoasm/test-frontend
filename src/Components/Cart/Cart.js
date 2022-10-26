@@ -1,13 +1,13 @@
-import { Table, Typography } from 'antd';
 import React from "react"
 import "./Cart.css"
 import {
     ShoppingCartOutlined
   } from "@ant-design/icons";
+import { deleteItem } from "../../utils/controllers";
+import { Button } from 'antd';
 
 
-
-export default function Cart({cartItems}){
+export default function Cart({cartItems, setCartItems, total}){
     
 
 
@@ -16,7 +16,7 @@ export default function Cart({cartItems}){
             <h1>
              <ShoppingCartOutlined /> Cart
             </h1>
-                <div className="cart">
+                <div className="cart1">
                 <div className="keys">
                 <h2 className="key"> Product </h2>
                 <h2 className="key"> Quantity </h2>
@@ -25,18 +25,50 @@ export default function Cart({cartItems}){
                 </div>
             {
                 cartItems?.map((item) => (
-                    <div className="itemsCart">
-
-                        <h3 className="items">{item.name}</h3>
-                   
-                        <h3 className="items">{item.amount}</h3>
+                    <div className="itemsCart" key={item}>
                        
-                        <h3 className="items">{item.unit_price}</h3>
-                     
-                        <h3 className="items">{item.amount * item.unit_price}</h3>
-                    </div>
+                        {/* <div className="dataContainer"> */}
+                        <div className="left">
+                            <div className="nameItem">
+                        <h3 className="item">{item.name}</h3>
+                            </div>
+                        <div className="amount">
+                        <h3 className="item">{item.amount}</h3>
+                        </div>
+                       
+                       <div className="priceItem">
+                        <h3 className="item">{item.unit_price}</h3>
+                       </div>
+                       <div className="totalItem">
+                        <h3 className="item">{item.amount * item.unit_price}</h3>
+                       </div>
+                       <div className="buttons">
+                    <Button danger type="text" className="buttonDelete" onClick={()=>deleteItem(item, cartItems, setCartItems)}>Delete</Button>
+                       </div>
+                            
+                        </div>
+                        </div>
+                 
                 ))
             }
+            </div>
+            <div className="lastContainer">
+            <div className="totalOrder">
+                <h2>
+                    Total order price
+                </h2>
+                <h1>
+                    {total}
+                </h1>
+            </div>
+            <div className="order">
+                <h2>
+                    Create order
+                </h2>
+                <Button type="primary">
+                    here
+                </Button>
+            </div>
             </div>
         </div>
     )
