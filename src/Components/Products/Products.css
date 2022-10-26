@@ -1,8 +1,6 @@
 .mainProducts{
     display: flex;
     padding: 25px;
-    /* width: 50vw; */
-    /* background:blue; */
     margin: 5px;
 }
 
@@ -19,18 +17,3 @@
     display: flex;
     flex-wrap: wrap;
 }
-/* 
-.meta{
-    display:flex;
-    align-items:center;
-    background:red;
-    flex-direction: row;
-} */
-
-/* .cart{
-    display:flex;
-    align-items: center;
-    width: 50px;
-    background-color: black;
-    height: 50px;
-} */

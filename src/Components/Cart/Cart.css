@@ -1,6 +1,5 @@
 .main1 {
     display: flex;
-    /* background: blue; */
     height: 100%;
     width: 100%;
     flex-direction: column;
@@ -9,7 +8,6 @@
 
 .cart1{
     display: flex;
-    /* margin: 5px; */
     flex-direction: column;
     width: 100%;
     height: 100%
@@ -27,24 +25,20 @@
 
 .left{
     margin-top: -50px;
-    /* margin: -40px; */
     margin-left: -30px;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-    /* background-color: blue; */
     width: 100%;
 }
 
 .item{
-    background: blue;
     display: flex;
     margin: 70px
 }
 
 .nameItem{
     display: flex;
-    /* background:red; */
     justify-content: space-between;
     width: 80px;
     margin: 20px
@@ -52,7 +46,6 @@
 
 .amount{
     display: flex;
-    /* background:red; */
     justify-content: space-between;
     width: 80px;
     margin: 20px
@@ -60,7 +53,6 @@
 
 .priceItem{
     display: flex;
-    /* background:red; */
     justify-content: space-between;
     width: 80px;
     margin: 20px
@@ -68,7 +60,6 @@
 
 .totalItem{
     display: flex;
-    /* background:red; */
     justify-content: space-between;
     width: 80px;
     margin: 20px
@@ -93,7 +84,6 @@
 
 .buttons{
     display: flex;
-    /* background:red; */
     justify-content: space-between;
     width: 80px;
     margin: 50px;
@@ -118,3 +108,54 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 375px){
+     .key{
+        display: flex;
+        margin: 5px;
+        font-size: 17px;
+    } 
+
+    .nameItem{
+        display: flex;
+        justify-content: space-between;
+        width: 40px;
+        margin: 10px;
+        font-size: 10px;
+        margin-left: 5px;
+        padding: -15px
+    }
+    
+    .amount{
+        display: flex;
+        justify-content: space-between;
+        width: 40px;
+        margin: 10px;
+        font-size: 10px;
+    }
+    
+    .priceItem{
+        display: flex;
+        justify-content: space-between;
+        width: 40px;
+        margin: 10px;
+        font-size: 10px;
+    }
+    
+    .totalItem{
+        display: flex;
+        justify-content: space-between;
+        width: 40px;
+        margin: 10px;
+        font-size: 10px;
+    }
+
+    .buttonDelete{
+        display:flex;
+        widht: 10px;
+        height: 30px;
+        margin-top: 25px;
+        font-size: 10px;
+    } 
+
+  }

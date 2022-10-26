@@ -1,5 +1,4 @@
 import redbull from "../Imagenes/Red_Bull_1800X1800_transparent.png"
-import rice from "../Imagenes/arrozalternova.jpg"
 import papitas from "../Imagenes/papitasAlternova.jpg"
 import meat from "../Imagenes/meatAlternova.png"
 import rice1 from "../Imagenes/riceAlternova.png"

@@ -10,21 +10,29 @@
     display:flex;
     min-width: 98.7vw;
     min-height: 100vh;
-    /* background: black; */
  }
 
- .containerCards{
+ .containerCards{  
     display: flex;
-    /* background: black; */
     width: 50vw;
     flex-wrap: wrap;
  }
 
- .containerTable{
+ .containerTable{ 
     display: flex;
-    /* background: blue; */
     width: 50vw;
     min-height: 100vh;
  }
 
- 
+ @media screen and (max-width: 375px){
+   .mainHome{
+      display:flex;
+      flex-direction: column;
+   }
+
+   .containerTable{ 
+      display: flex;
+      width: 100vw;
+      min-height: 100vh;
+   }
+ }

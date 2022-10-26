@@ -9,7 +9,6 @@
     display:flex;
     alig-items: center;
     flex-direction: row;
-    /* background: blue; */
     width: 100vw;
 }
 
@@ -19,11 +18,19 @@
 
 .title{
     display:flex;
-    /* background: red; */
     margin-left: 230px;
     align-items:center;
 }
 
 .imagenAlternova{
     border: none
+}
+
+@media screen and (max-width: 375px){
+    .title{
+        display:flex;
+        margin-top: 30px;
+        margin-left: -215px;
+        align-items:center;
+    }
 }
