@@ -4,7 +4,9 @@ import { ShoppingCartOutlined } from "@ant-design/icons";
 import { deleteItem } from "../../utils/controllers";
 import { Button } from "antd";
 
-export default function Cart({ cartItems, setCartItems, total }) {
+
+export default function Cart({ cartItems, setCartItems, total, json }) {
+  
   return (
     <div className="main1">
       <h1>
@@ -54,7 +56,7 @@ export default function Cart({ cartItems, setCartItems, total }) {
         </div>
         <div className="order">
           <h2>Create order</h2>
-          <Button type="primary" onClick={() => console.log(cartItems)}>
+          <Button type="primary" onClick={()=> console.log(json(cartItems, total))}>
             here
           </Button>
         </div>

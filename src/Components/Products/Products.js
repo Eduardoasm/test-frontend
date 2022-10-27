@@ -13,6 +13,7 @@ export default function Products({
   image,
   safeProduct,
 }) {
+
   return (
     <div className="mainProducts">
       <Card

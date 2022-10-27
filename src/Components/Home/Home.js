@@ -13,9 +13,22 @@ export default function Home() {
     return productsInLocalStorage ? JSON.parse(productsInLocalStorage) : [];
   });
 
+
   useEffect(() => {
     localStorage.setItem("cartProducts", JSON.stringify(cartItems));
   }, [cartItems]);
+
+  const json = (cartItems, total) => {
+   const totalCart = cartItems.map(e => {
+      const json = {
+        name: e.name,
+        amount: e.amount,
+        totalProductPrice: e.unit_price * e.amount,
+      }
+      return json
+    })
+    return { totalCart, total }
+  }
 
   const dataInfo = data.products;
 
@@ -46,6 +59,7 @@ export default function Home() {
             cartItems={cartItems}
             setCartItems={setCartItems}
             total={total}
+            json={()=> json(cartItems, total)}
           />
         </div>
       </div>
