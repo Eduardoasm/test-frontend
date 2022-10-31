@@ -7,6 +7,8 @@ import { Button } from "antd";
 
 export default function Cart({ cartItems, setCartItems, total, json }) {
 
+  // json(cartItems, total)
+
   const exportData = () => {
     const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
       JSON.stringify(json(cartItems, total))

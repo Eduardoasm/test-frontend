@@ -30,7 +30,7 @@ export default function Home() {
     return { totalCart, total }
   }
 
-  const dataInfo = data.products;
+   const dataInfo = data.products;
 
   const total = cartItems.reduce(
     (acumulador, actual) => acumulador + actual.amount * actual.unit_price,

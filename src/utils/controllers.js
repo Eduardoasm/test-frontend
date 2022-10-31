@@ -1,5 +1,7 @@
 import Swal from "sweetalert2";
+import { data } from "../Data/data";
 
+const dataInfo = data.products
 
 export const addItem = (productItem, cartItems, setCartItems) => {
   if (productItem.stock === 0) {
@@ -15,7 +17,7 @@ export const addItem = (productItem, cartItems, setCartItems) => {
   );
 
   if (itemInCart) {
-    productItem.stock = productItem.stock -1
+    console.log(productItem.stock = productItem.stock -1)
     setCartItems(
       cartItems.map((productInCart) => {
         if (productInCart.name === productItem.name) {
@@ -25,7 +27,7 @@ export const addItem = (productItem, cartItems, setCartItems) => {
       })
     );
   } else {
-    productItem.stock = productItem.stock -1
+    console.log(productItem.stock = productItem.stock -1)
     setCartItems([...cartItems, { ...productItem, amount: 1 }]);
   }
 };
@@ -36,12 +38,22 @@ export const deleteItem = (productItem, cartItems, setCartItems) => {
   );
   
   if (itemInCart.amount === 1) {
-    productItem.stock = productItem.stock +1
+    const dataHome = dataInfo.find(e => {
+      if(e.name === productItem.name){
+        return e
+      }
+    })
+    console.log(dataHome.stock = dataHome.stock +1)
     setCartItems(
       cartItems.filter((productItemCart) => productItemCart !== productItem)
     );
   } else {
-    productItem.stock = productItem.stock +1
+    const dataHome = dataInfo.find(e => {
+      if(e.name === productItem.name){
+        return e
+      }
+    })
+    console.log(dataHome.stock = dataHome.stock +1)
     setCartItems(
       cartItems.map((productItemCart) => {
         if (productItemCart.name === productItem.name) {
