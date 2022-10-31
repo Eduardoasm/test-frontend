@@ -67,7 +67,7 @@ export default function Cart({ cartItems, setCartItems, total, json }) {
         </div>
         <div className="order">
           <h2>Create order</h2>
-          <Button type="primary" onClick={()=> exportData}>
+          <Button type="primary" onClick={()=> exportData()}>
             here
           </Button>
         </div>
