@@ -6,6 +6,17 @@ import { Button } from "antd";
 
 
 export default function Cart({ cartItems, setCartItems, total, json }) {
+
+  const exportData = () => {
+    const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+      JSON.stringify(json(cartItems, total))
+    )}`;
+    const link = document.createElement("a");
+    link.href = jsonString;
+    link.download = "data.json";
+
+    link.click();
+  };
   
   return (
     <div className="main1">
@@ -56,7 +67,7 @@ export default function Cart({ cartItems, setCartItems, total, json }) {
         </div>
         <div className="order">
           <h2>Create order</h2>
-          <Button type="primary" onClick={()=> console.log(json(cartItems, total))}>
+          <Button type="primary" onClick={()=> exportData}>
             here
           </Button>
         </div>
